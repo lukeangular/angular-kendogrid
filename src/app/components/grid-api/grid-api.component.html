@@ -1,0 +1,20 @@
+<kendo-grid
+    [data]="gridView"
+    [pageSize]="pageSize"
+    [skip]="skip"
+    [pageable]="true"
+    (pageChange)="pageChange($event)"
+    [loading]="gridView['loading']"
+
+    >
+
+    {{currentPage}}
+
+    <kendo-grid-column field="ltv" title="LTV"> </kendo-grid-column>
+    <kendo-grid-column
+        field="company_name" title="Company name">
+    </kendo-grid-column>
+    <kendo-grid-column field="indicator" title="Indicatar">
+    </kendo-grid-column>
+    <kendo-grid-column field="script" title="Script"> </kendo-grid-column>
+</kendo-grid>

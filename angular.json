@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d4861152-dd45-49cc-be0b-d886b8bee491"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,9 +30,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              {
+                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
+              },
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,6 +103,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
+              },
               "src/styles.css"
             ],
             "scripts": []

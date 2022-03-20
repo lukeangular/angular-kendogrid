@@ -1,0 +1,60 @@
+<!-- [pageSize]="state.take"
+[skip]="state.skip"
+[sort]="state.sort"
+[filter]="state.filter"
+(dataStateChange)="dataStateChange($event)"
+
+-->
+
+<kendo-grid
+
+    [kendoGridBinding]="gridData"
+
+    [pageSize]="4"
+    [filterable]="true"
+    [sortable]="true"
+    [pageable]="true">
+
+
+    <ng-template kendoGridToolbarTemplate>
+        <button kendoGridPDFCommand icon="file-pdf">Export to PDF</button>
+        <button type="button" kendoGridExcelCommand icon="file-excel">
+            Export to Excel
+        </button>
+    </ng-template>
+
+    <kendo-grid-column
+        field="ProductID"
+        title="ID"
+        [width]="40"
+        [filterable]="false">
+    </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Product Name">
+    </kendo-grid-column>
+    <kendo-grid-column
+        field="FirstOrderedOn"
+        title="First Ordered On"
+        [width]="240"
+        filter="date"
+        format="{0:d}">
+    </kendo-grid-column>
+    <kendo-grid-column
+        field="UnitPrice"
+        title="Unit Price"
+        [width]="240"
+        filter="numeric"
+        format="{0:c}">
+    </kendo-grid-column>
+    <kendo-grid-column field="Discontinued" [width]="120" filter="boolean">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+        </ng-template>
+    </kendo-grid-column>
+
+
+    <kendo-grid-pdf fileName="Grid.pdf">
+    </kendo-grid-pdf>
+    <kendo-grid-excel fileName="Products.xlsx"></kendo-grid-excel>
+
+
+</kendo-grid>
