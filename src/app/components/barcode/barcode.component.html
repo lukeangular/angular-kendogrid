@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>BAR CODE</h3>
+            <br>
+            <div class="k-card-deck">
+                <div class="k-card">
+                    <div class="k-card-body">
+                        <kendo-barcode type="EAN8" value="1234567"> </kendo-barcode>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>QR CODE</h3>
+            <br>
+            <div class="k-card-body">
+                <kendo-qrcode
+                    value="1234567"
+                    errorCorrection="M">
+                </kendo-qrcode>
+            </div>
+            <br>
+        </div>
+    </div>
+    <hr>
+    <h3>Rendering Modes</h3>
+    <br>
+    <div class="k-card-header">
+        <p>
+            when rendering large pages, it is recommended to use the Canvas rendering mode
+        </p>
+    </div>
+    <div class="k-card-body">
+        <kendo-barcode
+            type="Code128"
+            value="Mascarpone"
+            [width]="200"
+            [height]="100"
+            renderAs="svg">
+        </kendo-barcode>
+
+    </div>
