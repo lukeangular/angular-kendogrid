@@ -2,6 +2,16 @@
 ![kendogrid](https://user-images.githubusercontent.com/100868300/159147269-39e4cc80-37ab-4ffe-b863-c1c452a1f949.JPG)
 
 
+# Kendo Bar cod
+![bar_codes](https://user-images.githubusercontent.com/100868300/159217978-46522f61-75c2-45c4-bca7-fcad3e865e65.JPG)
+
+
+# Kendo Editor
+![editor](https://user-images.githubusercontent.com/100868300/159218016-a133c930-1641-4f56-a594-0cc289069a73.JPG)
+
+
+
+
 # KendoGrid
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
